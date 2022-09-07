@@ -1,0 +1,298 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #39445a;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #39445a;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.row2{
+  min-height: 70vh;
+}
+.contents{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  padding: 15px 16px;
+}
+.input{
+  width: 40%;
+}
+.img{
+  width: 40px;
+  height: 40px;
+}
+.sumbit{
+  border-radius: 5px;
+  padding-left: 10px !important;
+  width: 70px;
+  padding: 10px;
+  margin-bottom: 220px !important;
+  height: 35px !important;
+ 
+  background-color:#39445a;
+}
+
+
+.search{
+  width: 70%;
+  margin: auto;
+}
+.search2{
+  width: 40px;
+  height: 40px;
+padding: 10px;
+}
+.btn2{
+  margin-bottom: 10px;
+}
+.in{
+  font-size: 20px;
+  color: blue;
+}
+.form-control{
+  text-align: center;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+}
+
+main {
+  align-items: center;
+  animation: animate-bg 5s linear infinite;
+  background-color: #39445a;
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  justify-content: center;
+}
+
+main > div {
+  margin: 50px;
+}
+
+@keyframes animate-bg {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #39445a;
+  animation: animateColor 8s linear infinite;
+}
+
+@keyframes animateColor {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+.container {
+  display: flex;
+}
+
+.circle {
+  position: relative;
+  width: 50vmin;
+  height: 50vmin;
+  margin: 0 -5vmin;
+}
+
+.circle span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(calc(18deg * var(--i)));
+}
+
+.circle span::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: calc(50% - 5vmin);
+  width: 10vmin;
+  height: 10vmin;
+  background: #00ff0a;
+  border-radius: 50%;
+  box-shadow: 0 0 4vmin #00ff0a, 0 0 8vmin #00ff0a, 0 0 12vmin #00ff0a;
+  transform: scale(0.1);
+  animation: animate 4s linear calc(0.1s * var(--i)) infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: scale(0.8);
+  }
+  50%,
+  100% {
+    transform: scale(0.1);
+  }
+}
+
+.circle:nth-child(2) {
+  transform: rotate(-180deg);
+}
+
+.circle:nth-child(2) span::before {
+  animation-delay: calc(-0.1s * var(--i));
+}
+
+:root{
+  --clr-body-bg: #09162e;
+  --clr-loader-bg: #00aeff;
+}
+
+body {
+  background:var(--clr-body-bg);
+}
+
+.loader {
+  padding: 30px;
+  border: 10px solid var(--clr-loader-bg);
+  box-shadow: 0 0 5px 1px var(--clr-loader-bg);
+  border-right-color: var(--clr-body-bg);
+  border-radius: 50%;
+  animation: rotate 1s infinite linear;
+  position:absolute;
+  top:45%;
+  left:45%;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+#btnMain{
+  margin-right: 30px;
+}
+.btn1{
+  font-size: 14px;
+  margin-right: 30px;
+  width: 70px;
+  height: 40px;
+  /* padding: 5px; */
+  background: #00aeff;
+  border-radius:5px;
+  border: none;
+ 
+  
+}
+.btn1:hover{
+  font-family: sans-serif;
+  font-size: 18pxpx;
+  margin-right: 30px;
+  width: 70px;
+  height: 40px;
+  padding: 5px;
+  background: #00aeff;
+  color: #ffd900;
+  
+}
+.movie{
+  height: 50px;
+  gap: 20px;
+  width: 50px;
+  margin-bottom: 10px;
+  
+
+
+}
+.camera{
+  height: 50px;
+  gap: 10px;
+  width: 50px;
+  margin-bottom: 10px;
+}
+.youtube{
+  height: 40px;
+  gap: 10px;
+  width: 40px;
+
+}
+
+.logo{
+  font-size: 25px;
+  text-align: center;
+  gap: 10px;
+  margin: 20px;
+  color: rgb(138, 117, 117);
+}
+.logo:hover{
+  font-size: 30px;
+  text-align: center;
+  gap: 10px;
+  margin: 20px;
+  color: grey darken-2;
+ 
+}
+
+
+
+.search23{
+  margin: 0px 20px;
+ 
+}
+
+.movies, .series{
+
+ 
+  color: white;
+
+
+}
+.movies{
+margin-right: 20px;
+}
+.form-control{
+  background-color:wheat;
+  color: wheat !important;
+}
+.select{
+  width: 100px;
+}
